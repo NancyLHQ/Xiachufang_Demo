@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220621 19:03:13.794" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="/Users/huaqing.luo/Documents/07Automation/Xiachufang_Demo/TestCase/test.robot">
+<test id="s1-t1" name="Test MyLibrary" line="11">
+<kw name="Log" library="BuiltIn">
+<arg>Going to MyLibrary</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220621 19:03:14.252" level="INFO">Going to MyLibrary</msg>
+<status status="PASS" starttime="20220621 19:03:14.250" endtime="20220621 19:03:14.255"/>
+</kw>
+<kw name="Test Add" library="MyLibrary">
+<var>${res}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<doc>两数相加</doc>
+<msg timestamp="20220621 19:03:14.257" level="INFO">${res} = True</msg>
+<status status="PASS" starttime="20220621 19:03:14.256" endtime="20220621 19:03:14.257"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${res}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220621 19:03:14.259" level="INFO">True</msg>
+<status status="PASS" starttime="20220621 19:03:14.258" endtime="20220621 19:03:14.259"/>
+</kw>
+<kw name="Print Hello" library="MyLibrary">
+<msg timestamp="20220621 19:03:14.261" level="INFO">hello world!</msg>
+<status status="PASS" starttime="20220621 19:03:14.260" endtime="20220621 19:03:14.262"/>
+</kw>
+<status status="PASS" starttime="20220621 19:03:14.247" endtime="20220621 19:03:14.263"/>
+</test>
+<status status="PASS" starttime="20220621 19:03:13.801" endtime="20220621 19:03:14.266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
