@@ -1,11 +1,6 @@
 *** Settings ******
-Library    AppiumLibrary
-Library    MyLibrary
 
-#Resource    BaseKeywords.robot
-Resource    ../KeyWords/Keywords.robot
-Resource    ../Variables/Locator.robot   
-Resource    ../BaseKeywords/BaseKeywords.robot
+Resource    ../Settings/Settings.robot
 
 Suite Setup     Launch App
 Suite Teardown      Close All Apps
@@ -23,7 +18,7 @@ Search Recipe
     [Documentation]     User seach a recipe from first menu
     Move To Dockbar  ${XiaChuFang_TabButton}
     Search Item From Search_Inputbox  ${Recipe_Name}
-    Sleep    2
+    Sleep    3
     Page Should Contain Text    ${Recipe_Name}
     Click Element   ${Back_Button}
     Wait Until Element Is Visible    ${Back_Button}

@@ -22,13 +22,13 @@ ${Back_Button}          id=com.xiachufang:id/navigation_img_view
 
 #set profile
 ${Profile_Edit_Button}          xpath = //*[@text="编辑"]           
-${Personal_Profile_Text}        id = com.xiachufang:id/main_profile_desc_tv
-${EditProfile_Title}            id = com.xiachufang:id/navigation_bar_title_layout
+${Personal_Profile_Text}        id = com.xiachufang:id/main_profile_info_tv
+${EditProfile_Button}            id = com.xiachufang:id/personal_edit_button          #com.xiachufang:id/navigation_bar_title_layout
 ${Gender_SelectBox}             id = com.xiachufang:id/profile_setting_gender
 ${Gender_Scroll}                id = com.xiachufang:id/gender_wheel
 ${Gender_Confirm_Button}        id = com.xiachufang:id/confirm_btn
 ${Birth_Setting_Area}           id = com.xiachufang:id/profile_setting_birthday
-${Birthday_Calender}            xpath = //android.view.View[@content-desc="03 March 2021"]    
+${Birthday_Calender}            xpath = //android.view.View[@content-desc="03 March 2022"]    
 ${Birth_OK_Button}              id = android:id/button1
 ${Profile_Save_Button}          id = com.xiachufang:id/navigation_right_btn
 ${Pre_Calander_Button}          id = android:id/prev
@@ -43,13 +43,4 @@ ${Profile_Hometown_Selectbox}    id = com.xiachufang:id/profile_setting_location
 ${Profile_Hometown_Confirm_Button}        id = com.xiachufang:id/city_picker_finish_btn
 ${Profile_Intro_Inputbox}        id = com.xiachufang:id/profile_setting_desc
                                   
-*** Variables ***
-#Test Data
-${MY_Email}             707448071@qq.com
-${MY_Password}          Samsung21
-${Recipe_Name}          鱼香肉丝
-${Engineer}             工程师
-${TargetYear}           2010
-${Profile_Username_Context}     Nancy_Auto01
-${Profile_Intro_Context}        我是一条自动化测试数据，只喜欢吃饭不喜欢做饭  ^_^
 

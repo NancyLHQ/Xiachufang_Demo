@@ -1,19 +1,14 @@
 *** Settings ******
-Library    AppiumLibrary
-resource    ../Variables/Locator.robot
 
+Resource    ../Settings/Settings.robot
 ***Keywords***
 Launch App
     [Documentation]     Launch APP
     Log    ......Start executing USER LOGIN
-#    Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android  platformVersion=12    deviceName=Galaxy S21 5G   
-#...    app=/Users/huaqing.luo/Downloads/xiachufang.apk  appPackage=com.xiachufang   udid=R3CR310W8DM
 
-     Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android  platformVersion=12    deviceName=Pixel 6 Pro     #Pixel 6 Pro  
-...    app=/Users/huaqing.luo/Downloads/xiachufang.apk  appPackage=com.xiachufang   udid=1C191FDEE0089W 
-#...    appActivity=com.xiachufang.startpage.ui.StartPageActivity    unicodeKeyboard=True    resetKeyboard=True      app=/Users/huaqing.luo/Downloads/xiachufang.apk  
-#     Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android  platformVersion=12    deviceName=Galaxy Note20 Ultra 5G     #GalaxNote20
-# ...    app=/Users/huaqing.luo/Downloads/xiachufang.apk  appPackage=com.xiachufang   udid=R5CT215Y9MX 
+    Open Application    ${AppiumServer}     platformName=${platformName}  platformVersion=${platformVersion}    deviceName=${deviceName}    
+...    app=${App}    appPackage=${appPackage}    udid=${udid} 
+
     sleep   3
     Log     ******** Launching xiachufang ing **********
 

@@ -1,9 +1,6 @@
 *** Settings ******
-Library    AppiumLibrary
-Library    MyLibrary
-resource    ../Variables/Locator.robot
-Resource    ../BaseKeywords/BaseKeywords.robot
 
+Resource    ../Settings/Settings.robot
 ***Keywords**
 Login Via Email
     [Arguments]     ${userEmail}     ${userPWD}
@@ -108,8 +105,9 @@ Input Profile Introduction
 Move To Edit Profile
     Click Element   ${MINE_TabButton}  
     Wait Until Element Is Visible    ${Personal_Profile_Text}
+
     Click Element   ${Personal_Profile_Text}
-    Wait Until Element Is Visible   ${EditProfile_Title} 
+    Wait Until Element Is Visible   ${EditProfile_Button} 
     Click Element   ${Profile_Edit_Button}
 
 Close Profile Setting Page
