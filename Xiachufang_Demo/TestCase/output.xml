@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220704 18:49:58.903" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220705 16:57:55.780" rpa="false" schemaversion="3">
 <suite id="s1" name="Xiachufang Testcases" source="/Users/huaqing.luo/Documents/Automation/Git/Xiachufang_Demo/Xiachufang_Demo/TestCase/Xiachufang_Testcases.robot">
 <kw name="Launch App" library="BaseKeywords" type="SETUP">
 <doc>Launch APP</doc>
 <kw name="Log" library="BuiltIn">
 <arg>......Start executing USER LOGIN</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:49:59.700" level="INFO">......Start executing USER LOGIN</msg>
-<status status="PASS" starttime="20220704 18:49:59.700" endtime="20220704 18:49:59.700"/>
+<msg timestamp="20220705 16:57:56.039" level="INFO">......Start executing USER LOGIN</msg>
+<status status="PASS" starttime="20220705 16:57:56.039" endtime="20220705 16:57:56.039"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${AppiumServer}</arg>
@@ -23,19 +23,19 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220704 18:49:59.700" endtime="20220704 18:50:06.080"/>
+<status status="PASS" starttime="20220705 16:57:56.040" endtime="20220705 16:58:07.041"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 18:50:09.098" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220704 18:50:06.096" endtime="20220704 18:50:09.099"/>
+<msg timestamp="20220705 16:58:10.066" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220705 16:58:07.041" endtime="20220705 16:58:10.066"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>******** Launching xiachufang ing **********</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:09.099" level="INFO">******** Launching xiachufang ing **********</msg>
-<status status="PASS" starttime="20220704 18:50:09.099" endtime="20220704 18:50:09.099"/>
+<msg timestamp="20220705 16:58:10.067" level="INFO">******** Launching xiachufang ing **********</msg>
+<status status="PASS" starttime="20220705 16:58:10.067" endtime="20220705 16:58:10.067"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${AGREE_Status}</var>
@@ -45,29 +45,29 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Element Should Be Visible" library="AppiumLibrary">
 <arg>${LAUNCH_APP_AGREE}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:09.100" endtime="20220704 18:50:09.319"/>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220705 16:58:10.890" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220705 16:58:10.502" endtime="20220705 16:58:10.891"/>
 </kw>
-<msg timestamp="20220704 18:50:09.319" level="INFO">${AGREE_Status} = True</msg>
-<status status="PASS" starttime="20220704 18:50:09.099" endtime="20220704 18:50:09.319"/>
+<msg timestamp="20220705 16:58:10.891" level="FAIL">ValueError: Element locator 'xpath=//*[@text="同意并继续"]' did not match any elements.</msg>
+<status status="FAIL" starttime="20220705 16:58:10.068" endtime="20220705 16:58:10.893"/>
+</kw>
+<msg timestamp="20220705 16:58:10.893" level="INFO">${AGREE_Status} = False</msg>
+<status status="PASS" starttime="20220705 16:58:10.067" endtime="20220705 16:58:10.893"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${AGREE_Status}</arg>
 <arg>Click Element</arg>
 <arg>${LAUNCH_APP_AGREE}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${LAUNCH_APP_AGREE}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:09.323" level="INFO">Clicking element 'xpath=//*[@text="同意并继续"]'.</msg>
-<status status="PASS" starttime="20220704 18:50:09.319" endtime="20220704 18:50:10.147"/>
-</kw>
-<status status="PASS" starttime="20220704 18:50:09.319" endtime="20220704 18:50:10.147"/>
+<status status="PASS" starttime="20220705 16:58:10.893" endtime="20220705 16:58:10.893"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 18:50:20.147" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220704 18:50:10.147" endtime="20220704 18:50:20.147"/>
+<msg timestamp="20220705 16:58:20.909" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220705 16:58:10.894" endtime="20220705 16:58:20.910"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${Update_status}</var>
@@ -77,370 +77,115 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <kw name="Element Should Be Visible" library="AppiumLibrary">
 <arg>${Update_Next_Button}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:20.148" endtime="20220704 18:50:20.297"/>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220705 16:58:38.174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220705 16:58:36.318" endtime="20220705 16:58:38.174"/>
 </kw>
-<msg timestamp="20220704 18:50:20.297" level="INFO">${Update_status} = True</msg>
-<status status="PASS" starttime="20220704 18:50:20.148" endtime="20220704 18:50:20.297"/>
+<msg timestamp="20220705 16:58:38.175" level="FAIL">ValueError: Element locator 'xpath=//*[@text="下次再说"]' did not match any elements.</msg>
+<status status="FAIL" starttime="20220705 16:58:20.910" endtime="20220705 16:58:38.175"/>
+</kw>
+<msg timestamp="20220705 16:58:38.175" level="INFO">${Update_status} = False</msg>
+<status status="PASS" starttime="20220705 16:58:20.910" endtime="20220705 16:58:38.175"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${Update_status}</arg>
 <arg>Click Element</arg>
 <arg>${Update_Next_Button}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Update_Next_Button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:20.302" level="INFO">Clicking element 'xpath=//*[@text="下次再说"]'.</msg>
-<status status="PASS" starttime="20220704 18:50:20.297" endtime="20220704 18:50:21.014"/>
-</kw>
-<status status="PASS" starttime="20220704 18:50:20.297" endtime="20220704 18:50:21.014"/>
+<status status="PASS" starttime="20220705 16:58:38.175" endtime="20220705 16:58:38.175"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${MINE_TabButton}</arg>
 <arg>20</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:21.014" endtime="20220704 18:50:21.296"/>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" starttime="20220705 16:58:50.123" endtime="20220705 16:58:50.123"/>
+</kw>
+<msg timestamp="20220705 16:58:50.127" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20220705 16:58:38.176" endtime="20220705 16:58:50.127"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 18:50:23.317" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220704 18:50:21.297" endtime="20220704 18:50:23.318"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>mine button is visable!</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:23.318" level="INFO">mine button is visable!</msg>
-<status status="PASS" starttime="20220704 18:50:23.318" endtime="20220704 18:50:23.318"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
 <arg>${MINE_TabButton}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:23.319" endtime="20220704 18:50:23.567"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${MINE_TabButton}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:23.570" level="INFO">Clicking element 'xpath=//*[@text="我"]'.</msg>
-<status status="PASS" starttime="20220704 18:50:23.567" endtime="20220704 18:50:24.797"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking Mine button</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:24.797" level="INFO">Clicking Mine button</msg>
-<status status="PASS" starttime="20220704 18:50:24.797" endtime="20220704 18:50:24.797"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${FORCE_AGREE}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:24.802" level="INFO">Clicking element 'id = com.xiachufang:id/cb_agreement'.</msg>
-<status status="PASS" starttime="20220704 18:50:24.797" endtime="20220704 18:50:24.965"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.128"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Clicking agree Contracts button</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:24.965" level="INFO">Clicking agree Contracts button</msg>
-<status status="PASS" starttime="20220704 18:50:24.965" endtime="20220704 18:50:24.965"/>
+<status status="NOT RUN" starttime="20220705 16:58:50.128" endtime="20220705 16:58:50.129"/>
 </kw>
-<status status="PASS" starttime="20220704 18:49:59.699" endtime="20220704 18:50:24.965"/>
+<status status="FAIL" starttime="20220705 16:57:56.039" endtime="20220705 16:58:50.129"/>
 </kw>
 <test id="s1-t1" name="User Login" line="9">
-<kw name="Login Via Email" library="Keywords">
-<arg>${MY_Email}</arg>
-<arg>${MY_Password}</arg>
-<doc>User select Email as login method</doc>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Start ---&gt; login via Email</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:24.966" endtime="20220704 18:50:24.967"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${LOGIN_EMAIL}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:24.969" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="使用邮箱登录"]'.</msg>
-<status status="PASS" starttime="20220704 18:50:24.967" endtime="20220704 18:50:25.763"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${EMAIL_INPUTBOX}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:25.763" endtime="20220704 18:50:26.747"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${EMAIL_INPUTBOX}</arg>
-<arg>${userEmail}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:26.751" level="INFO">Typing text '707448071@qq.com' into text field 'id=com.xiachufang:id/login_account_edit_text'</msg>
-<status status="PASS" starttime="20220704 18:50:26.747" endtime="20220704 18:50:27.366"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${PASSWORD_INPUTBOX}</arg>
-<arg>${userPWD}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:27.370" level="INFO">Typing text 'Samsung21' into text field 'id =com.xiachufang:id/login_password_edit_text'</msg>
-<status status="PASS" starttime="20220704 18:50:27.366" endtime="20220704 18:50:27.955"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220704 18:50:27.955" endtime="20220704 18:50:28.497"/>
-</kw>
-<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
-<arg>20s</arg>
-<arg>2s</arg>
-<arg>Click Element</arg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:28.503" level="INFO">Clicking element 'id=com.xiachufang:id/login_btn'.</msg>
-<status status="PASS" starttime="20220704 18:50:28.498" endtime="20220704 18:50:29.847"/>
-</kw>
-<status status="PASS" starttime="20220704 18:50:28.497" endtime="20220704 18:50:29.847"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Finish ---&gt; log via Email</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:29.847" endtime="20220704 18:50:29.847"/>
-</kw>
-<status status="PASS" starttime="20220704 18:50:24.966" endtime="20220704 18:50:29.847"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${MY_Account}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:29.848" endtime="20220704 18:50:30.373"/>
-</kw>
-<kw name="Element Should Be Visible" library="AppiumLibrary">
-<arg>${MY_Account}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:30.373" endtime="20220704 18:50:30.958"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Login successfully!!</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:30.958" level="INFO">Login successfully!!</msg>
-<status status="PASS" starttime="20220704 18:50:30.958" endtime="20220704 18:50:30.958"/>
-</kw>
 <doc>User login with Email</doc>
-<status status="PASS" starttime="20220704 18:50:24.966" endtime="20220704 18:50:30.958"/>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220705 16:58:50.129" endtime="20220705 16:58:50.130">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t2" name="Search Recipe" line="17">
-<kw name="Move To Dockbar" library="Keywords">
-<arg>${XiaChuFang_TabButton}</arg>
-<doc>Move to the first page</doc>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Start ---&gt;move to Dockbar</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:30.959" endtime="20220704 18:50:30.960"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Dockbar_Menu}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:30.963" level="INFO">Clicking element 'id=com.xiachufang:id/text'.</msg>
-<status status="PASS" starttime="20220704 18:50:30.960" endtime="20220704 18:50:31.847"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>tapping xiachufang!!!</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220704 18:50:31.847" level="INFO">tapping xiachufang!!!</msg>
-<status status="PASS" starttime="20220704 18:50:31.847" endtime="20220704 18:50:31.847"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${Search_Inputbox}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:31.847" endtime="20220704 18:50:32.947"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Finish ---&gt; move to Dockbar</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:32.947" endtime="20220704 18:50:32.947"/>
-</kw>
-<status status="PASS" starttime="20220704 18:50:30.959" endtime="20220704 18:50:32.948"/>
-</kw>
-<kw name="Search Item From Search_Inputbox" library="Keywords">
-<arg>${Recipe_Name}</arg>
-<doc>User search something from search box, input items and click search button</doc>
-<kw name="Log To Console" library="BuiltIn">
-<arg>start ---&gt; Searching Items</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:32.948" endtime="20220704 18:50:32.949"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${Search_Inputbox}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20220704 18:50:32.949" endtime="20220704 18:50:33.097"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Search_Inputbox}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:33.102" level="INFO">Clicking element 'id=com.xiachufang:id/search_edit_text'.</msg>
-<status status="PASS" starttime="20220704 18:50:33.097" endtime="20220704 18:50:33.257"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>${Search_Inputbox}</arg>
-<arg>${Search_Item}</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:33.261" level="INFO">Typing text '鱼香肉丝' into text field 'id=com.xiachufang:id/search_edit_text'</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220704 18:50:33.705" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 18:50:33.347" endtime="20220704 18:50:33.705"/>
-</kw>
-<msg timestamp="20220704 18:50:33.706" level="FAIL">ValueError: Element locator 'id=com.xiachufang:id/search_edit_text' did not match any elements.</msg>
-<status status="FAIL" starttime="20220704 18:50:33.257" endtime="20220704 18:50:33.709"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${Search_Button}</arg>
-<arg>20</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.709" endtime="20220704 18:50:33.710"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Search_Button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.710" endtime="20220704 18:50:33.710"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.710" endtime="20220704 18:50:33.710"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Finish ---&gt; Searching Items</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.710" endtime="20220704 18:50:33.710"/>
-</kw>
-<status status="FAIL" starttime="20220704 18:50:32.948" endtime="20220704 18:50:33.711"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.711" endtime="20220704 18:50:33.711"/>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<arg>${Recipe_Name}</arg>
-<doc>Verifies that current page contains `text`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.711" endtime="20220704 18:50:33.711"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Back_Button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.712" endtime="20220704 18:50:33.712"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${Back_Button}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.712" endtime="20220704 18:50:33.712"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Back_Button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:33.712" endtime="20220704 18:50:33.712"/>
-</kw>
 <doc>User seach a recipe from first menu</doc>
-<status status="FAIL" starttime="20220704 18:50:30.958" endtime="20220704 18:50:33.713">ValueError: Element locator 'id=com.xiachufang:id/search_edit_text' did not match any elements.</status>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220705 16:58:50.132" endtime="20220705 16:58:50.132">Test execution stopped due to a fatal error.</status>
 </test>
 <test id="s1-t3" name="Set Profile" line="27">
-<kw name="Move To Edit Profile" library="Keywords">
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${MINE_TabButton}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220704 18:50:33.718" level="INFO">Clicking element 'xpath=//*[@text="我"]'.</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20220704 18:50:34.773" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220704 18:50:34.314" endtime="20220704 18:50:34.773"/>
-</kw>
-<msg timestamp="20220704 18:50:34.774" level="FAIL">ValueError: Element locator 'xpath=//*[@text="我"]' did not match any elements.</msg>
-<status status="FAIL" starttime="20220704 18:50:33.714" endtime="20220704 18:50:34.774"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${Personal_Profile_Text}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.774" endtime="20220704 18:50:34.775"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Personal_Profile_Text}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.775" endtime="20220704 18:50:34.775"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<arg>${EditProfile_Button}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.775" endtime="20220704 18:50:34.775"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Profile_Edit_Button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.775" endtime="20220704 18:50:34.775"/>
-</kw>
-<status status="FAIL" starttime="20220704 18:50:33.714" endtime="20220704 18:50:34.776"/>
-</kw>
-<kw name="Input User Name" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.776" endtime="20220704 18:50:34.776"/>
-</kw>
-<kw name="Select Gender" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.777" endtime="20220704 18:50:34.777"/>
-</kw>
-<kw name="Select Birthday" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.777" endtime="20220704 18:50:34.777"/>
-</kw>
-<kw name="Select Professional" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.777" endtime="20220704 18:50:34.777"/>
-</kw>
-<kw name="Select Hometown" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.777" endtime="20220704 18:50:34.778"/>
-</kw>
-<kw name="Input Profile Introduction" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.778" endtime="20220704 18:50:34.778"/>
-</kw>
-<kw name="Submit Profile" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.778" endtime="20220704 18:50:34.778"/>
-</kw>
-<kw name="Close Profile Setting Page" library="Keywords">
-<status status="NOT RUN" starttime="20220704 18:50:34.778" endtime="20220704 18:50:34.778"/>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<arg>${Engineer}</arg>
-<doc>Verifies that current page contains `text`.</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.778" endtime="20220704 18:50:34.778"/>
-</kw>
-<kw name="Test Add" library="MyLibrary">
-<var>${res}</var>
-<arg>1</arg>
-<arg>2</arg>
-<arg>3</arg>
-<doc>两数相加</doc>
-<status status="NOT RUN" starttime="20220704 18:50:34.779" endtime="20220704 18:50:34.779"/>
-</kw>
 <doc>User set personal profile info</doc>
-<status status="FAIL" starttime="20220704 18:50:33.713" endtime="20220704 18:50:34.779">ValueError: Element locator 'xpath=//*[@text="我"]' did not match any elements.</status>
+<tag>robot:exit</tag>
+<status status="FAIL" starttime="20220705 16:58:50.133" endtime="20220705 16:58:50.134">Test execution stopped due to a fatal error.</status>
 </test>
 <kw name="Close All Apps" library="Keywords" type="TEARDOWN">
 <doc>close all opened applications</doc>
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20220704 18:50:34.798" endtime="20220704 18:50:35.197"/>
+<status status="PASS" starttime="20220705 16:58:50.135" endtime="20220705 16:58:50.585"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Application all killed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220704 18:50:35.197" endtime="20220704 18:50:35.197"/>
+<status status="PASS" starttime="20220705 16:58:50.586" endtime="20220705 16:58:50.586"/>
 </kw>
-<status status="PASS" starttime="20220704 18:50:34.797" endtime="20220704 18:50:35.197"/>
+<status status="PASS" starttime="20220705 16:58:50.135" endtime="20220705 16:58:50.586"/>
 </kw>
-<status status="FAIL" starttime="20220704 18:49:58.905" endtime="20220704 18:50:35.197"/>
+<status status="FAIL" starttime="20220705 16:57:55.782" endtime="20220705 16:58:50.586">Suite setup failed:
+Execution terminated by signal</status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="0" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
 </tag>
 <suite>
-<stat pass="1" fail="2" skip="0" id="s1" name="Xiachufang Testcases">Xiachufang Testcases</stat>
+<stat pass="0" fail="3" skip="0" id="s1" name="Xiachufang Testcases">Xiachufang Testcases</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220705 16:58:50.127" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>

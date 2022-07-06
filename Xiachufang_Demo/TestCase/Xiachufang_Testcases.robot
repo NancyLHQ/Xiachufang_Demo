@@ -34,7 +34,7 @@ Set Profile
     Select Hometown
     Input Profile Introduction
     Submit Profile
-    Close Profile Setting Page
+    #Close Profile Setting Page
     
     Page Should Contain Text    ${Engineer}
     

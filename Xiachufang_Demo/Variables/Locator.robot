@@ -22,7 +22,8 @@ ${Back_Button}          id=com.xiachufang:id/navigation_img_view
 
 #set profile
 ${Profile_Edit_Button}          xpath = //*[@text="编辑"]           
-${Personal_Profile_Text}        id = com.xiachufang:id/main_profile_info_tv
+${Personal_Profile_Text}        id = com.xiachufang:id/man_profile_user_info_container   #com.xiachufang:id/main_profile_info_tv
+
 ${EditProfile_Button}            id = com.xiachufang:id/personal_edit_button          #com.xiachufang:id/navigation_bar_title_layout
 ${Gender_SelectBox}             id = com.xiachufang:id/profile_setting_gender
 ${Gender_Scroll}                id = com.xiachufang:id/gender_wheel

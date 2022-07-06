@@ -107,8 +107,8 @@ Move To Edit Profile
     Wait Until Element Is Visible    ${Personal_Profile_Text}
 
     Click Element   ${Personal_Profile_Text}
-    Wait Until Element Is Visible   ${EditProfile_Button} 
-    Click Element   ${Profile_Edit_Button}
+    #Wait Until Element Is Visible   ${EditProfile_Button} 
+    #click Element   ${Profile_Edit_Button}
 
 Close Profile Setting Page
     Click Element   ${Profile_Close_Button}
