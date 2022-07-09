@@ -43,6 +43,7 @@ Search Item From Search_Inputbox
     [Documentation]  User search something from search box, input items and click search button
     [Arguments]     ${Search_Item}
     Log to console      start ---> Searching Items
+    Sleep    3
     Wait Until Element Is Visible    ${Search_Inputbox}
     Click Element   ${Search_Inputbox}
 
