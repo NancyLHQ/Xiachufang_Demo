@@ -21,11 +21,12 @@ Launch App
     Sleep    10
     ${Update_status}    Run Keyword And Return Status    Element Should Be Visible    ${Update_Next_Button}
     Run Keyword If    ${Update_status}    Click Element   ${Update_Next_Button}  
- 
-    Wait Until Element Is Visible   ${MINE_TabButton}      20
+     
+    Wait Until Page Contains Element   ${MINE_TabButton}  
+    #Wait Until Element Is Visible   ${MINE_TabButton}      20
     #Click Element   ${Update_Next_Button}
     #Wait Until Element Is Visible   ${MINE_TabButton}      20
-    Sleep    2
+    #Sleep    2
     Log    mine button is visable!
     Wait Until Element Is Visible  ${MINE_TabButton} 
     Click Element   ${MINE_TabButton} 
