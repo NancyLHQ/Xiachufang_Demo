@@ -17,6 +17,7 @@ User Login
 Search Recipe
     [Documentation]     User seach a recipe from first menu
     Move To Dockbar  ${XiaChuFang_TabButton}
+    sleep    3
     Search Item From Search_Inputbox  ${Recipe_Name}
     Sleep    3
     Page Should Contain Text    ${Recipe_Name}

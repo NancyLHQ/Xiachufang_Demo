@@ -44,7 +44,8 @@ Search Item From Search_Inputbox
     [Arguments]     ${Search_Item}
     Log to console      start ---> Searching Items
     Sleep    3
-    Wait Until Element Is Visible    ${Search_Inputbox}
+    Wait Until Page Contains Element    ${Search_Inputbox}
+    #Wait Until Element Is Visible    ${Search_Inputbox}
     Click Element   ${Search_Inputbox}
 
     Input Text      ${Search_Inputbox}      ${Search_Item}
