@@ -15,7 +15,7 @@ Launch App
 
     ${AGREE_Status}    Run Keyword And Return Status    Element Should Be Visible    ${LAUNCH_APP_AGREE}
     Run Keyword If    ${AGREE_Status}    Click Element   ${LAUNCH_APP_AGREE}
-    Sleep    15
+    Sleep    20
     ${Update_status}    Run Keyword And Return Status    Element Should Be Visible    ${Update_Next_Button}
     Run Keyword If    ${Update_status}    Wait Until Keyword Succeeds    20    2    Click Element   ${Update_Next_Button}  
      
