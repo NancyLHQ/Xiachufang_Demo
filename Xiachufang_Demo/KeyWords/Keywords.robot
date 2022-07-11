@@ -43,10 +43,7 @@ Search Item From Search_Inputbox
     [Documentation]  User search something from search box, input items and click search button
     [Arguments]     ${Search_Item}
     Log to console      start ---> Searching Items
-    #Sleep    3
-    #Wait Until Page Contains Element    ${Search_Inputbox}
-    #Wait Until Element Is Visible    ${Search_Inputbox}
-    
+    Wait Until Page Contains Element    ${Search_Inputbox}
     Wait Until Keyword Succeeds    20    2    Click Element   ${Search_Inputbox}
     Input Text      ${Search_Inputbox}      ${Search_Item}
     Wait Until Element Is Visible   ${Search_Button}    20
