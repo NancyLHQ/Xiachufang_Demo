@@ -6,7 +6,8 @@ Login Via Email
     [Arguments]     ${userEmail}     ${userPWD}
     [Documentation]     User select Email as login method
     Log to console      Start ---> login via Email
-    Click Element   ${LOGIN_EMAIL} 
+    Wait Until Page Contains Element    ${LOGIN_EMAIL} 
+    Wait Until Keyword Succeeds    20    2    Click Element   ${LOGIN_EMAIL} 
     #Log   Clicking login via Email button 
 
     Wait Until Element Is Visible   ${EMAIL_INPUTBOX} 
@@ -54,8 +55,9 @@ Search Item From Search_Inputbox
 Submit Profile
     Wait Until Page Contains Element    ${Profile_Save_Button}
     Wait Until Keyword Succeeds    20    2    Click Element    ${Profile_Save_Button}     
-    Wait Until Page Contains    ${Profile_Username_Context}    
-    Log    Setting over
+    #Wait Until Page Contains    ${Profile_Username_Context}    
+    Wait Until Page Contains Element    ${MINE_TabButton}
+    Log    Submitted Profile Setting 
 
 Input User Name
     Wait Until Element Is Visible    ${Profile_Username_Inputbox}    20
