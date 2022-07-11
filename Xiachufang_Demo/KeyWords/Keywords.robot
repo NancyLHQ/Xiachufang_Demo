@@ -36,7 +36,7 @@ Move To Dockbar
     Log to console      Start --->move to Dockbar
     Click Element   ${Dockbar_Menu}
     Log     tapping xiachufang!!!
-    Wait Until Element Is Visible   ${Search_Inputbox}    
+    Wait Until Page Contains Element   ${Search_Inputbox}    
     Log to console      Finish ---> move to Dockbar
 
 Search Item From Search_Inputbox
@@ -45,7 +45,7 @@ Search Item From Search_Inputbox
     Log to console      start ---> Searching Items
     Wait Until Page Contains Element    ${Search_Inputbox}
     Wait Until Keyword Succeeds    20    2    Click Element   ${Search_Inputbox}
-    Input Text      ${Search_Inputbox}      ${Search_Item}
+    Wait Until Keyword Succeeds    20    2    Input Text      ${Search_Inputbox}      ${Search_Item}
     Wait Until Element Is Visible   ${Search_Button}    20
     Click Element   ${Search_Button}
 
