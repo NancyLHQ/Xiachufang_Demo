@@ -14,12 +14,13 @@ User Login
     Element Should Be Visible     ${MY_Account}
     Log     Login successfully!!
 
+
 Search Recipe
     [Documentation]     User seach a recipe from first menu
     Move To Dockbar  ${XiaChuFang_TabButton}
-    sleep    3
+    
     Search Item From Search_Inputbox  ${Recipe_Name}
-    Sleep    3
+    
     Page Should Contain Text    ${Recipe_Name}
     Click Element   ${Back_Button}
     Wait Until Element Is Visible    ${Back_Button}
@@ -39,7 +40,9 @@ Set Profile
 
     Page Should Contain Text    ${Engineer}
     
+    
     ${res}    Test Add    1   2   3
+    
 
    
 

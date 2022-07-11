@@ -43,65 +43,65 @@ Search Item From Search_Inputbox
     [Documentation]  User search something from search box, input items and click search button
     [Arguments]     ${Search_Item}
     Log to console      start ---> Searching Items
-    Sleep    3
-    Wait Until Page Contains Element    ${Search_Inputbox}
+    #Sleep    3
+    #Wait Until Page Contains Element    ${Search_Inputbox}
     #Wait Until Element Is Visible    ${Search_Inputbox}
-    Click Element   ${Search_Inputbox}
-
+    
+    Wait Until Keyword Succeeds    20    2    Click Element   ${Search_Inputbox}
     Input Text      ${Search_Inputbox}      ${Search_Item}
     Wait Until Element Is Visible   ${Search_Button}    20
     Click Element   ${Search_Button}
-    sleep   3
+
     Log to console      Finish ---> Searching Items
 
 Submit Profile
-    Click Element    ${Profile_Save_Button} 
-    sleep   2
+    Wait Until Page Contains Element    ${Profile_Save_Button}
+    Wait Until Keyword Succeeds    20    2    Click Element    ${Profile_Save_Button}     
+    Wait Until Page Contains    ${Profile_Username_Context}    
     Log    Setting over
 
 Input User Name
     Wait Until Element Is Visible    ${Profile_Username_Inputbox}    20
     Click Element    ${Profile_Username_Inputbox} 
     Clear Text    ${Profile_Username_Inputbox}
-    Sleep    1
     Input Text    ${Profile_Username_Inputbox}    ${Profile_Username_Context}
-    Sleep    2
 
 Select Professional  
     #[Arguments]     ${professional}
     #${prof}     Rep
     Click Element   ${Profession_Button}
     Swipe Professtional To Bottom
-    Sleep   2
+    Wait Until Page Contains Element    ${Engineer_Text}
     Click Element   ${Engineer_Text}
 
 Select Gender    
+    Wait Until Page Contains Element    ${Gender_SelectBox}
     Tap     ${Gender_SelectBox}   
     #Swipe Gender Up to Down According To Window Size  
-    Click Element  ${Gender_Confirm_Button}    
-    sleep   2
+    Wait Until Keyword Succeeds    20    2    Click Element  ${Gender_Confirm_Button}    
+    
 
 Select Birthday
-    Tap     ${Birth_Setting_Area}  
-    sleep   1
+    Wait Until Page Contains Element    ${Birth_Setting_Area}
+    Wait Until Keyword Succeeds    20    2    Tap     ${Birth_Setting_Area}  
+    Wait Until Page Contains Element    ${Pre_Calander_Button}
+    
     Swipe Calender By Left Button
     #Select Year And Select Date
-    Click Element    ${Birth_OK_Button} 
-    sleep   2
+    Wait Until Keyword Succeeds    20    2    Click Element    ${Birth_OK_Button} 
+    
 
 Select Hometown
-    Click Element    ${Profile_Hometown_Selectbox} 
-    Sleep    1
-    Click Element    ${Profile_Hometown_Confirm_Button}
-    Sleep    1
+    Wait Until Page Contains Element    ${Profile_Hometown_Selectbox}
+    Wait Until Keyword Succeeds    20    2    Click Element    ${Profile_Hometown_Selectbox}  
+    Wait Until Keyword Succeeds    20    2    Click Element    ${Profile_Hometown_Confirm_Button}
+    
 
 Input Profile Introduction
-    Click Element    ${Profile_Intro_Inputbox} 
-    Sleep    1 
-    Clear Text     ${Profile_Intro_Inputbox} 
-    Sleep    1
-    Input Text     ${Profile_Intro_Inputbox}     ${Profile_Intro_Context}     
-    Sleep    1
+    Wait Until Page Contains Element    ${Profile_Intro_Inputbox}
+    Wait Until Keyword Succeeds    20    2    Click Element    ${Profile_Intro_Inputbox}        
+    Clear Text     ${Profile_Intro_Inputbox}     
+    Wait Until Keyword Succeeds    20    2     Input Text     ${Profile_Intro_Inputbox}     ${Profile_Intro_Context}         
     Hide Keyboard  
 
 Move To Edit Profile
@@ -113,6 +113,7 @@ Move To Edit Profile
     #click Element   ${Profile_Edit_Button}
 
 Close Profile Setting Page
-    Click Element   ${Profile_Close_Button}
-    sleep   2
+    Wait Until Page Contains Element    ${Profile_Close_Button}
+    Wait Until Keyword Succeeds    20    2    Click Element   ${Profile_Close_Button}
+    
     

@@ -12,21 +12,15 @@ Launch App
     sleep   3
     Log     ******** Launching xiachufang ing **********
 
-    # Click Element   ${LAUNCH_APP_AGREE}
-    # Log     Clicking Agree 
-    # #Wait Until Element Is Visible   ${MINE_TabButton}      20
-    # Sleep    10
+
     ${AGREE_Status}    Run Keyword And Return Status    Element Should Be Visible    ${LAUNCH_APP_AGREE}
     Run Keyword If    ${AGREE_Status}    Click Element   ${LAUNCH_APP_AGREE}
-    Sleep    10
+    Sleep    12
     ${Update_status}    Run Keyword And Return Status    Element Should Be Visible    ${Update_Next_Button}
-    Run Keyword If    ${Update_status}    Click Element   ${Update_Next_Button}  
+    Run Keyword If    ${Update_status}    Wait Until Keyword Succeeds    20    2    Click Element   ${Update_Next_Button}  
      
     Wait Until Page Contains Element   ${MINE_TabButton}  
-    #Wait Until Element Is Visible   ${MINE_TabButton}      20
-    #Click Element   ${Update_Next_Button}
-    #Wait Until Element Is Visible   ${MINE_TabButton}      20
-    #Sleep    2
+    
     Log    mine button is visable!
     Wait Until Element Is Visible  ${MINE_TabButton} 
     Click Element   ${MINE_TabButton} 
@@ -55,7 +49,7 @@ Swipe Calender Left to Right According To Window Size
     Swipe      ${Window_Width_Start}    ${Window_Height_Start}    ${Window_Width_End}    ${Window_Height_End}   500
 
 Swipe Calender By Left Button   
-    Sleep   2
+    Wait Until Page Contains Element    ${Pre_Calander_Button} 
     Log    swiped calender!
     ${Target_Get_Status}    Set Variable   False
     WHILE   ${Target_Get_Status} != True
@@ -66,6 +60,7 @@ Swipe Calender By Left Button
     END  
     Click Element   ${Birthday_Calender}  
     Log    find the target birthday!
+
 Select Year And Select Date
     ${Window_Width}     Get Window Width    
     ${Window_Height}    Get Window Height
@@ -74,12 +69,11 @@ Select Year And Select Date
     ${Window_Height_Start}     evaluate    ${Window_Width}*0.5
     ${Window_Height_End}     evaluate    ${Window_Width}*0.7
     
+    Wait Until Page Contains Element    ${Select_Year_Button}
     Click Element    ${Select_Year_Button} 
     Log    click select year button
-    Sleep    1
+
     
-    Log    tapped scrollable area
-    Sleep    1
     # ${Target_Year_Status}    Set Variable   False
     # Log    status variable set!
     # WHILE   ${Target_Year_Status} != True
@@ -97,8 +91,9 @@ Select Year And Select Date
 
     ${TargetDate_Get_Status}    Set Variable   False
     WHILE   ${TargetDate_Get_Status} != True
-        Click Element   ${Pre_Calander_Button} 
-        Sleep   1
+        Wait Until Page Contains Element    ${Pre_Calander_Button}
+        Wait Until Keyword Succeeds    20    2    Click Element   ${Pre_Calander_Button} 
+        
         ${Target_Get_Status}    Run Keyword And Return Status   Element Should Be Visible   ${Birthday_Calender}  
         Run Keyword If  ${Target_Get_Status}    Click Element   ${Birthday_Calender}       
     END  
@@ -113,10 +108,10 @@ Swipe Gender Up to Down According To Window Size
     ${Window_Height_Start}     evaluate    ${Window_Width}*0.53
     ${Window_Height_End}     evaluate    ${Window_Width}*0.46
     #Swipe    ${Window_Width_Start}    ${Window_Height_Start}    ${Window_Width_End}    ${Window_Height_End}   1000
-    Wait Until Element Is Visible    ${Gender_Scroll}
+    #Wait Until Element Is Visible    ${Gender_Scroll}
+    Wait Until Page Contains Element    ${Gender_Scroll}
     #Scroll Down     ${Gender_Scroll}
                 
-    Sleep   2
     Log     Swiped Gender selection!
 
 
