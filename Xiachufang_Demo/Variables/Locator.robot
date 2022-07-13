@@ -18,7 +18,7 @@ ${Search_Inputbox}      id=com.xiachufang:id/search_edit_text
 ${Search_Button}        id=com.xiachufang:id/search_btn
 ${Recipe_Target}        xpath=//*[@text="智能排序"]
 ${Back_Button}          id=com.xiachufang:id/navigation_img_view
-                         
+${SearchResult_FirstItem}                     id=com.xiachufang:id/common_first_text   
 
 #set profile
 ${Profile_Edit_Button}          xpath = //*[@text="编辑"]           

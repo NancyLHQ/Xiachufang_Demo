@@ -49,7 +49,7 @@ Search Item From Search_Inputbox
     Wait Until Keyword Succeeds    20    2    Input Text      ${Search_Inputbox}      ${Search_Item}
     Wait Until Element Is Visible   ${Search_Button}    20
     Click Element   ${Search_Button}
-
+    Wait Until Page Contains Element    com.xiachufang:id/swipeRefreshLayout
     Log to console      Finish ---> Searching Items
 
 Submit Profile
@@ -104,13 +104,14 @@ Input Profile Introduction
     Hide Keyboard  
 
 Move To Edit Profile
+    Log to console      Start --->move to Profile Setting
     Click Element   ${MINE_TabButton}  
     Wait Until Element Is Visible    ${Personal_Profile_Text}
 
     Click Element   ${Personal_Profile_Text}
     #Wait Until Element Is Visible   ${EditProfile_Button} 
     #click Element   ${Profile_Edit_Button}
-
+    Log to console      End --->move to Profile Setting
 Close Profile Setting Page
     Wait Until Page Contains Element    ${Profile_Close_Button}
     Wait Until Keyword Succeeds    20    2    Click Element   ${Profile_Close_Button}
